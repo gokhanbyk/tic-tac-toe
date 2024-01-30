@@ -3,16 +3,19 @@ import { useState } from "react"
 import GameBoard from "./components/GameBoard"
 import Player from "./components/Player"
 import Log from "./components/Log"
+import { WINNING_COMBINATIONS }
+
+
 
 function deriveActivePlayer(gameTurns) {
-  let currentPlayer = 'X'
+    let currentPlayer = 'X'
 
-  if (gameTurns.length > 0 && gameTurns[0].player === 'X') {
-    currentPlayer = 'O'
+    if (gameTurns.length > 0 && gameTurns[0].player === 'X') {
+      currentPlayer = 'O'
+    }
+
+    return currentPlayer
   }
-
-  return currentPlayer
-}
 
 
 function App() {
